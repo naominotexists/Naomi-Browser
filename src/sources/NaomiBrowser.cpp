@@ -10,6 +10,7 @@
 #include "../headers/NaomiTabManager.h"
 
 NaomiBrowser::NaomiBrowser() : QMainWindow() {
+	resize(500, 500);
 	initUI();
 }
 

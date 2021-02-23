@@ -8,7 +8,5 @@ public:
 	explicit NaomiTabManager(QWidget* parent);
 	void createPage(QUrl url, QString title);
 	void createPage(QString html, QString title);
-public slots:
-	void pageLoadFinished(NaomiWebView* page);
 };
 

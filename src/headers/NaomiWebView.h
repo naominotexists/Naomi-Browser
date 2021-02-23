@@ -18,7 +18,6 @@ signals:
 public slots:
 	void handleFinished(bool ok);
 	void handleStarted();
-	void handleProgress(int prog);
 private:
 	int indq;
 };

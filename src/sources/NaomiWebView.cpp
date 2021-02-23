@@ -9,7 +9,6 @@ NaomiWebView::NaomiWebView(QWidget* parent, int indp) : QWebEngineView(parent) {
 	indq = indp;
 	connect(this->page(), &QWebEnginePage::loadFinished, this, &NaomiWebView::handleFinished);
 	connect(this, &NaomiWebView::loadStarted, this, &NaomiWebView::handleStarted);
-	connect(this->page(), &QWebEnginePage::loadProgress, this, &NaomiWebView::handleProgress);
 }
 
 void NaomiWebView::handleFinished(bool ok) {
@@ -17,11 +16,7 @@ void NaomiWebView::handleFinished(bool ok) {
 }
 
 void NaomiWebView::handleStarted() {
-	std::cout << "Page loading..." << std::endl;
-}
-
-void NaomiWebView::handleProgress(int prog) {
-	std::cout << "Page loading: %" << prog << std::endl;
+	qDebug() << "Page loading...";
 }
 
 int NaomiWebView::ind() {
